@@ -51,7 +51,7 @@ class Song
     formatted_name = filename.split("\s-\s")
     song.name = formatted_name[1]
     song.artist_name = formatted_name[0]
-    return song.name
+    song
   end
 
   def self.create_from_filename

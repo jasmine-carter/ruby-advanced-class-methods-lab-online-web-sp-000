@@ -47,13 +47,18 @@ class Song
   end
 
   def self.new_from_filename(filename)
-    #song = self.new
+    song = self.new
     formatted_name = filename.split("\s-\s")
-    #song.name = formatted_name[0]
-    #song.artist_name = formatted_name[1]
+    song.name = formatted_name[0]
+    song.artist_name = formatted_name[1]
   end
 
-  def self.create_from_filename
+  def self.create_from_filename(filename)
+    s = self.new
+    formatted_name = filename.split("\s-\s")
+    s.name = formatted_name[0]
+    s.artist_name = formatted_name[1]
+    @@all << s
   end
 
   def self.destroy_all

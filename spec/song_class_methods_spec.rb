@@ -1,6 +1,5 @@
 require 'spec_helper'
 require 'pry'
-attr_reader :name, :artist_name
 
 describe "Song Class Methods" do
   describe '.create' do

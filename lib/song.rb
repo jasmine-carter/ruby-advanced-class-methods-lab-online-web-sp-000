@@ -55,12 +55,11 @@ class Song
     song
   end
 
-  def self.create_from_filename
+  def self.create_from_filename(filename)
     s = self.new
     formatted_name = filename.split("\s-\s")
-    s.name = formatted_name[0]
-    s.artist_name = formatted_name[1]
-    s.artist_name.chomp(".mp3")
+    s.name = formatted_name[1].chomp(".mp3")
+    s.artist_name = formatted_name[0]
     @@all << s
   end
 
